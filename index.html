@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sheikh Sayeed Islam - Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Sheikh Sayeed Islam</h1>
+    <p>Creative Developer • Tech Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+      <button id="toggle-theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="C:\Users\HP\Desktop\Sayeed\Sayeed inside/Sayeed.jpg" alt="My Photo" />
+      <p>Hello! I'm <strong>Sheikh sayeed Islam</strong>. I love coding and building projects that make a difference.</p>
+      <p><a href="resume.pdf" download>📄 Download My Resume</a></p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>🎮 Game App</h3>
+          <p>A browser game made with JavaScript and HTML Canvas.</p>
+        </div>
+        <div class="project">
+          <h3>🌐 Portfolio Website</h3>
+          <p>The very site you're viewing now — created from scratch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div id="blog-container"></div>
+      <div class="pagination">
+        <button onclick="changePage(-1)">← Prev</button>
+        <button onclick="changePage(1)">Next →</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name — Built with 💜 HTML, CSS, and JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
