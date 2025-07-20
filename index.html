@@ -1,72 +1,139 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sheikh Sayeed Islam - Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SAYEED</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg: #fff;
+      --text: #222;
+      --accent: #6a0dad;
+    }
+    [data-theme="dark"] {
+      --bg: #111;
+      --text: #eee;
+      --accent: #bb86fc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: var(--accent);
+      color: white;
+      position: relative;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 { font-size: 4rem; }
+    .subtitle { font-size: 1.25rem; margin-top: 1rem; }
+    #toggle-theme {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none; border: none;
+      font-size: 1.5rem; color: white;
+      cursor: pointer;
+    }
+    main { max-width: 800px; margin: auto; padding: 2rem; }
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    ul { list-style: none; }
+    ul li {
+      padding: 0.5rem 0;
+      border-left: 4px solid var(--accent);
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: bold; }
+    a:hover { text-decoration: underline; }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    input, textarea, button {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button {
+      background: var(--accent); color: white;
+      border: none; cursor: pointer;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 3rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <h1>Sheikh Sayeed Islam</h1>
-    <p>Student • Creative Developer • Tech Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-      <button id="toggle-theme">🌙</button>
-    </nav>
+  <header class="hero">
+    <h1>Hello!</h1>
+    <p class="subtitle">I’m Sheikh Sayeed Islam. I am 17 years old.</p>
+    <button id="toggle-theme">🌙</button>
   </header>
 
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <img src="Sayeed.jpg" alt="My Photo" />
-      <p>Hello! I'm <strong>Sheikh sayeed Islam</strong>. I love coding and building projects that make a difference.</p>
-      <p><a href="Curriculum Vitae of SSI.pdf" download>📄 Download My Resume</a></p>
+      <p>I'm Sheikh Sayeed Islam. I was born in Kushita and studied till class 2. Then, I took admission in Dhaka Residential Model College in the 3rd class. I'm currently studying in class 12. I'm interested in Physics and Mathematics. I also love coding.</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>🎓 IYMC Bronze Honor</li>
+      </ul>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <h3>🎮 Game App</h3>
-          <p>A browser game made with JavaScript and HTML Canvas.</p>
-        </div>
-        <div class="project">
-          <h3>🌐 Portfolio Website</h3>
-          <p>The very site you're viewing now — created from scratch.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="blog">
-      <h2>Blog</h2>
-      <div id="blog-container"></div>
-      <div class="pagination">
-        <button onclick="changePage(-1)">← Prev</button>
-        <button onclick="changePage(1)">Next →</button>
-      </div>
+      <ul>
+        <li><a href="#">Project 1 — brief description</a></li>
+        <li><a href="#">Project 2 — brief description</a></li>
+      </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
+      <form action="https://formspree.io/f/YOUR_ID" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
         <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">Send</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Your Name — Built with 💜 HTML, CSS, and JS</p>
+    <p>Made by Sayeed. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    toggleBtn.addEventListener("click", () => {
+      const html = document.documentElement;
+      html.setAttribute("data-theme", html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+  </script>
 </body>
 </html>
