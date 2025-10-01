@@ -9,10 +9,10 @@ themeToggle.addEventListener('click', () => {
 // 📰 Blog Pagination
 const posts = [
   {
-    title: "Why Black People are Safe?",
-    date: "May 19, 2025",
-    excerpt: "About the effect of UV rays on our skin",
-    link: "https://sci009hub.blogspot.com/#:~:text=Do%20you%20know,sun%27s%20strongest%20hours."
+    title: "🚀 My First Blog Post",
+    date: "May 18, 2025",
+    excerpt: "A quick intro to my web dev journey and this site.",
+    link: "blog/post1.html"
   },
   {
     title: "💡 Learning HTML & CSS",
